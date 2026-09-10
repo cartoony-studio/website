@@ -1,4 +1,5 @@
 ---
+import "../styles/variables.css";
 import "../styles/global.css";
 
 interface Props {
@@ -22,6 +23,14 @@ const {
     <meta name="description" content={description} />
 
     <link rel="icon" href="/favicon.svg" />
+
+    <!-- Recuerda el tema elegido antes de dibujar la página -->
+    <script is:inline>
+        const temaGuardado = localStorage.getItem("tema");
+        if (temaGuardado) {
+            document.documentElement.dataset.theme = temaGuardado;
+        }
+    </script>
 
 </head>
 

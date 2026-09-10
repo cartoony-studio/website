@@ -1,0 +1,25 @@
+/* Colores y fuentes del sitio.
+   El modo oscuro es el que se ve por defecto.
+   El modo claro se activa poniendo data-theme="light" en la etiqueta <html>. */
+
+:root {
+    /* Modo oscuro: negro y rojo */
+    --bg: #000000;
+    --navbar-bg: #302F2D;
+    --accent: #A20000;
+    --text: #FDFDFD;
+    --text-soft: #E0E0E0;
+
+    /* Fuentes */
+    --font-mono: ui-monospace, Consolas, "Courier New", monospace;
+    --font-sans: Inter, Arial, Helvetica, sans-serif;
+}
+
+[data-theme="light"] {
+    /* Modo claro: blanco y morado */
+    --bg: #FFFFFF;
+    --navbar-bg: #D9D9D9;
+    --accent: #AF10A0;
+    --text: #404040;
+    --text-soft: #404040;
+}
