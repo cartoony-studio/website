@@ -10,38 +10,42 @@
         <a href="/contact">Contact</a>
     </nav>
 
-    <!-- Aquí irá tu icono. Por ahora es un hexágono, y sirve para cambiar de tema. -->
+    <!-- Aquí irá tu icono. Por ahora es un círculo, y sirve para cambiar de tema. -->
     <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema"></button>
 
 </header>
 
 <style>
     .navbar {
+        white-space: nowrap;
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 2rem;
         margin: 25px 40px;
-        padding: 6px;
+        padding: 1px;
         background: var(--navbar-bg);
         border-radius: 999px;
         transition: background 0.2s;
     }
 
     .logo {
-        padding: 14px 30px;
+        padding: 5px 50px;
         background: var(--accent);
-        border-radius: 999px;
+        border-radius: 500px;
         color: #FFFFFF;
         font-family: var(--font-sans);
-        font-size: 1.35rem;
+        font-size: 1.5rem;
         font-weight: bold;
         text-decoration: none;
     }
 
     .links {
+        overflow-x: auto;
         display: flex;
-        gap: 3rem;
+        gap: 7rem;
+        scrollbar-width: thin;
+        scrollbar-color: var(--accent) transparent;
     }
 
     .links a {
@@ -51,14 +55,14 @@
     }
 
     .theme-toggle {
-        width: 34px;
-        height: 34px;
-        margin-right: 8px;
+        flex-shrink: 0;
+        width: 30px;
+        height: 30px;
+        margin-right: 4px;
         background: var(--accent);
         border: none;
         cursor: pointer;
-        /* Estas coordenadas le dan la forma de hexágono */
-        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        border-radius: 50%;
     }
 </style>
 
