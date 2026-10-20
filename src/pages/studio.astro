@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import PageHeader from "../components/PageHeader.astro";
+import Placeholder from "../components/Placeholder.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+    title="Studio — Cartoony Studio"
+    description="Cartoony Studio is an independent software studio focused on modern, simple, affordable products."
+>
+    <Navbar />
+
+    <main>
+        <PageHeader
+            kicker="Studio"
+            title="An independent software studio."
+            lead="We design and build modern, simple, affordable software — and the occasional small program just for the joy of it."
+        />
+
+        <Placeholder note="The full story is being written." />
+    </main>
+
+    <Footer />
+</Layout>

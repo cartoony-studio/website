@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import PageHeader from "../components/PageHeader.astro";
+import Placeholder from "../components/Placeholder.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+    title="Contact — Cartoony Studio"
+    description="Tell us what you need: a tool, a fix, or an idea worth building."
+>
+    <Navbar />
+
+    <main>
+        <PageHeader
+            kicker="Contact"
+            title="Let's talk."
+            lead="A tool you need, a fix you can't find, or an idea worth building — tell us about it."
+        />
+
+        <Placeholder note="Contact details are coming soon." />
+    </main>
+
+    <Footer />
+</Layout>

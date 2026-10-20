@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import PageHeader from "../components/PageHeader.astro";
+import Placeholder from "../components/Placeholder.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+    title="Cartoony Series — Cartoony Studio"
+    description="Small programs that do one thing well. Free to use, kept alive by donations."
+>
+    <Navbar />
+
+    <main>
+        <PageHeader
+            kicker="Cartoony Series"
+            title="Small programs, made with care."
+            lead="Little tools that do one thing well. Free to use, kept alive by donations."
+        />
+
+        <Placeholder note="The first programs are in the workshop." />
+    </main>
+
+    <Footer />
+</Layout>

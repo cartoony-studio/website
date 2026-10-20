@@ -1,0 +1,44 @@
+---
+interface Props {
+    note: string;
+}
+
+const { note } = Astro.props;
+---
+
+<section class="placeholder">
+    <p>
+        <span class="dot" aria-hidden="true"></span>
+        {note}
+    </p>
+</section>
+
+<style>
+    .placeholder {
+        width: min(36rem, calc(100% - 3rem));
+        margin: 4.5rem auto 0;
+        padding: 2.25rem 1.5rem;
+        border: 1px dashed color-mix(in srgb, var(--text) 22%, transparent);
+        border-radius: 1rem;
+        text-align: center;
+    }
+
+    p {
+        color: var(--text-soft);
+        font-size: 0.78rem;
+        letter-spacing: 0.14em;
+        line-height: 1.8;
+        text-transform: uppercase;
+    }
+
+    .dot {
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        margin-right: 0.6rem;
+        border-radius: 50%;
+        background: var(--accent);
+        box-shadow: 0 0 10px var(--accent);
+        vertical-align: middle;
+    }
+</style>

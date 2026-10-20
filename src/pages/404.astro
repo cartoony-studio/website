@@ -1,0 +1,81 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+    title="404 — Cartoony Studio"
+    description="This page could not be found."
+>
+    <Navbar />
+
+    <main class="lost">
+        <p class="code" aria-hidden="true">404</p>
+        <h1>This page doesn't exist.</h1>
+        <p class="hint">The link may be broken, or the page hasn't been built yet.</p>
+        <a class="home" href="/">Back to home</a>
+    </main>
+
+    <Footer />
+</Layout>
+
+<style>
+    .lost {
+        width: min(40rem, calc(100% - 3rem));
+        margin: 6rem auto 0;
+        text-align: center;
+    }
+
+    .code {
+        color: var(--accent);
+        font-size: clamp(5rem, 22vw, 11rem);
+        font-weight: bold;
+        line-height: 0.9;
+        letter-spacing: 0.08em;
+        text-shadow: 0 0 70px color-mix(in srgb, var(--accent) 55%, transparent);
+        user-select: none;
+    }
+
+    h1 {
+        margin-top: 1.5rem;
+        font-size: 1.4rem;
+        font-weight: normal;
+    }
+
+    .hint {
+        margin-top: 0.9rem;
+        color: var(--text-soft);
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .home {
+        display: inline-block;
+        margin-top: 2.5rem;
+        padding: 0.75rem 1.75rem;
+        border-radius: 999px;
+        background: var(--accent);
+        color: #FFFFFF;
+        font-size: 0.9rem;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        transition: transform 0.15s, filter 0.15s;
+    }
+
+    .home:hover {
+        transform: translateY(-1px);
+        filter: brightness(1.12);
+    }
+
+    .home:focus-visible {
+        outline: 2px solid var(--text);
+        outline-offset: 3px;
+    }
+
+    @media (max-width: 900px) {
+        .lost {
+            margin-top: 3.5rem;
+        }
+    }
+</style>

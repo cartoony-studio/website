@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import PageHeader from "../components/PageHeader.astro";
+import Placeholder from "../components/Placeholder.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+    title="Projects — Cartoony Studio"
+    description="Products, experiments, and works in progress from Cartoony Studio."
+>
+    <Navbar />
+
+    <main>
+        <PageHeader
+            kicker="Projects"
+            title="Things we're building."
+            lead="Products, experiments, and works in progress — including Cartoony Chat, our minimalist terminal-style messenger."
+        />
+
+        <Placeholder note="Project pages are on the way." />
+    </main>
+
+    <Footer />
+</Layout>
