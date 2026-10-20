@@ -1,4 +1,6 @@
 ---
+import Logo from "./Logo.astro";
+
 const links = [
     { href: "/cartoony-series", label: "Cartoony Series" },
     { href: "/projects", label: "Projects" },
@@ -24,8 +26,9 @@ const current = Astro.url.pathname.replace(/\/+$/, "") || "/";
         ))}
     </nav>
 
-    <!-- Aquí irá tu icono. Por ahora es un círculo, y sirve para cambiar de tema. -->
-    <button class="theme-toggle" id="theme-toggle" aria-label="Switch theme"></button>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Switch theme">
+        <Logo size={16} />
+    </button>
 
 </header>
 
@@ -82,11 +85,14 @@ const current = Astro.url.pathname.replace(/\/+$/, "") || "/";
 
     .theme-toggle {
         flex-shrink: 0;
+        display: grid;
+        place-items: center;
         width: 30px;
         height: 30px;
         margin-right: 4px;
         background: var(--accent);
         border: none;
+        color: #FFFFFF;
         cursor: pointer;
         border-radius: 50%;
     }
